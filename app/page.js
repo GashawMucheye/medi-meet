@@ -53,7 +53,7 @@ export default function Home() {
             <div className='relative h-[400px] lg:h-[500px] rounded-xl overflow-hidden'>
               <Image
                 src='/hero.png'
-                alt='Doctor consultation'
+                alt='Doctors image'
                 fill
                 priority
                 className='object-cover md:pt-14 rounded-xl'
