@@ -24,22 +24,35 @@ const Header = () => {
         </Link>
         <div className='flex items-center space-x-2 '>
           <SignedOut>
-            <SignInButton>
-              <Button variant='secondary'>Sign In</Button>
-            </SignInButton>
+            <div className='flex gap-2'>
+              <SignInButton>
+                <Button variant='secondary'>Sign In</Button>
+              </SignInButton>
+              <SignUpButton>
+                <Button variant='default'>Sign Up</Button>
+              </SignUpButton>
+            </div>
           </SignedOut>
 
           <SignedIn>
-            <UserButton
-              appearance={{
-                elements: {
-                  avatarBox: 'w-10 h-10',
-                  userButtonPopoverCard: 'shadow-xl',
-                  userPreviewMainIdentifier: 'font-semibold',
-                },
-              }}
-              afterSignOutUrl='/'
-            />
+            <div className='flex items-center gap-4'>
+              <Link
+                href='/profile'
+                className='text-sm font-medium hover:text-primary'
+              >
+                Profile
+              </Link>
+              <UserButton
+                appearance={{
+                  elements: {
+                    avatarBox: 'w-10 h-10',
+                    userButtonPopoverCard: 'shadow-xl',
+                    userPreviewMainIdentifier: 'font-semibold',
+                  },
+                }}
+                afterSignOutUrl='/'
+              />
+            </div>
           </SignedIn>
         </div>
       </nav>
