@@ -5,6 +5,7 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { creditBenefits, features, testimonials } from '@/lib/data';
+import Pricing from '@/components/Pricing';
 
 export default function Home() {
   return (
@@ -116,6 +117,7 @@ export default function Home() {
               needs
             </p>
           </div>
+          <Pricing />
 
           <div className='mx-auto'>
             {/* Description */}
@@ -208,7 +210,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-
       {/* CTA Section with green medical styling */}
       <section className='py-20'>
         <div className='container mx-auto px-4'>
